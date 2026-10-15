@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -55,4 +57,7 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    //outras dependencias
+    implementation(libs.androidx.compose.runtime.livedata)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7") // (ou a versão mais recente)
 }
